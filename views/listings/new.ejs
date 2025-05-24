@@ -1,0 +1,56 @@
+<% layout("/layouts/boilerplate") %>
+
+    <body>
+        <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <br><br>
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" name="title" placeholder="Enter the title" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Image Link</label>
+                        <input name="image" type="file" placeholder="upload" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="textarea" class="form-label">Description</label>
+                        <textarea name="description" placeholder="Enter description" class="form-control"
+                            required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <input name="price" type="number" placeholder="enter price" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" name="location" placeholder="enter location" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" name="country" placeholder="enter country" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Categories</label>
+                        <div class="d-flex flex-wrap gap-2">
+                            <% const allCategories=[ 'trending' , 'pool' , 'fort' , 'igloo' , 'farm' , 'camping'
+                                , 'boat' , 'artic' , 'mountain' , 'treehouse' , 'house' , 'beach' , 'city' ]; %>
+
+                                <% for (let cat of allCategories) { %>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" name="categories"
+                                            value="<%= cat %>" id="category-<%= cat %>">
+                                        <label class="form-check-label" for="category-<%= cat %>">
+                                            <%= cat %>
+                                        </label>
+                                    </div>
+                                    <% } %>
+                        </div>
+                    </div>
+                    <br><br>
+                    <button class="btn btn-dark">Add</button>
+                    <br><br>
+                </div>
+            </div>
+        </form>
+    </body>

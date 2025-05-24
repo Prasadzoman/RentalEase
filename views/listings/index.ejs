@@ -1,0 +1,105 @@
+<% layout("/layouts/boilerplate") %>
+  <hr>
+<div class="filters">
+  <div class="row">
+    <div class="col icons">
+      <div class="filter">
+        <a href="/listings/filter?category=trending">
+          <i class="fa-solid fa-fire"></i>
+          <b>trending</b>
+        </a>
+      </div>
+      <div class="filter">
+        <a href="/listings/filter?category=pool">
+          <i class="fa-solid fa-person-swimming"></i>
+          <b>pool</b>
+        </a>
+      </div>
+      <div class="filter">
+        <a href="/listings/filter?category=fort">
+          <i class="fa-brands fa-fort-awesome"></i>
+          <b>fort</b>
+        </a>
+      </div>
+      <div class="filter">
+        <a href="/listings/filter?category=igloo">
+          <i class="fa-solid fa-igloo"></i>
+          <b>igloo</b>
+        </a>
+      </div>
+      <div class="filter">
+        <a href="/listings/filter?category=farm">
+          <i class="fa-solid fa-cow"></i>
+          <b>farm</b>
+        </a>
+      </div>
+      <div class="filter">
+        <a href="/listings/filter?category=camping">
+          <i class="fa-solid fa-campground"></i>
+          <b>camping</b>
+        </a>
+      </div>
+      <div class="filter">
+        <a href="/listings/filter?category=boat">
+          <i class="fa-solid fa-sailboat"></i>
+          <b>boat</b>
+        </a>
+      </div>
+      <div class="filter">
+        <a href="/listings/filter?category=artic">
+          <i class="fa-solid fa-hexagon-nodes"></i>
+          <b>artic</b>
+        </a>
+      </div>
+      <div class="filter">
+        <a href="/listings/filter?category=mountain">
+          <i class="fa-solid fa-mountain"></i>
+          <b>mountain</b>
+        </a>
+      </div>
+      <div class="filter">
+        <a href="/listings/filter?category=treehouse">
+          <i class="fa-solid fa-tree"></i>
+          <b>treehouse</b>
+        </a>
+      </div>
+      <div class="filter">
+        <a href="/listings/filter?category=house">
+          <i class="fa-solid fa-house"></i>
+          <b>house</b>
+        </a>
+      </div>
+      <div class="filter">
+        <a href="/listings/filter?category=beach">
+          <i class="fa-solid fa-umbrella-beach"></i>
+          <b>beach</b>
+        </a>
+      </div>
+      <div class="filter">
+        <a href="/listings/filter?category=city">
+          <i class="fa-solid fa-city"></i>
+          <b>city</b>
+        </a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </div>
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <% for (let i of listings) { %>
+      <a href="/listings/<%= i.id %>" class="listing-link">
+        <div class="col card">
+          <img src="<%= i.image.url %>" class="card-img-top" alt="..." style="height: 20rem;">
+          <div class="card-img-overlay"></div>
+          <div class="card-body">
+            <p class="card-text">
+              <b>
+                <%= i.title %>
+              </b><br>
+              &#8377;<%= i.price.toLocaleString("en-IN") %> / night
+            </p>
+          </div>
+        </div>
+      </a>
+      <% } %>
+  </div>
