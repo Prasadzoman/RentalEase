@@ -137,3 +137,38 @@ body{
     color: #222222;
 }
 
+
+  .filters {
+    white-space: nowrap;
+    padding: 0.5rem;
+  }
+
+  .icons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  .filter {
+    flex: 0 0 auto;
+    text-align: center;
+  }
+
+  .filter i {
+    font-size: 1.3rem;
+    display: block;
+  }
+
+  .filter b {
+    font-size: 0.75rem;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .icons {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+
