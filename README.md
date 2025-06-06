@@ -4,7 +4,7 @@
 
 ## 🌐 Live Demo
 
-- live demo: [https://rentalease.onrender.com](https://rentalease.onrender.com)
+- live demo: [https://rentalease.onrender.com/listings]
 
 ---
 
