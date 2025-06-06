@@ -31,7 +31,7 @@
 
 | Layer      | Technologies                            |
 |------------|-----------------------------------------|
-| Frontend   | React.js, React Router, Bootstrap        |
+| Frontend   | HTML, JavaScript, CSS, EJS, Bootstrap        |
 | Backend    | Node.js, Express.js, MongoDB, Mongoose  |
 | Auth       | Passport.js, Express-session, Cookies   |
 | Database   | MongoDB Atlas                           |
